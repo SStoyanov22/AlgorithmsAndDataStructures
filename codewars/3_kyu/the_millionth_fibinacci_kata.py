@@ -38,8 +38,8 @@ import codewars_test as test
 from numpy import matrix
 def fib(n):
     return (matrix(
-        '0 1; 1 1' if n >= 0 else '-1 1; 1 0', object
-        ) ** abs(n))[0, 1]
+        '1 1; 1 0' if n >= 0 else '1 -1; 1 0', object
+        ) ** abs(n-1    ))[0, 0]
 
 def small_positive_numbers():
     for n, result in [(0, 0), (1, 1), (2, 1), (3, 2), (4, 3), (5, 5)]:
